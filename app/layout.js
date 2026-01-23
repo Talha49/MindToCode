@@ -1,21 +1,71 @@
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
+import { 
+  SITE_URL, 
+  DEFAULT_TITLE, 
+  SITE_SHORT_TITLE, 
+  DEFAULT_DESCRIPTION, 
+  DEFAULT_OG_IMAGE, 
+  absoluteUrl 
+} from "@/lib/seo";
 
 const inter = Inter({
-  subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap",
+  subsets: ["latin"],
 });
 
 const outfit = Outfit({
-  subsets: ["latin"],
   variable: "--font-outfit",
-  display: "swap",
+  subsets: ["latin"],
 });
 
 export const metadata = {
-  title: "MindToCode | Technical Guidance & Digital Solutions",
-  description: "Expert technical guidance and digital solutions for learners, graduates, startups, and growing businesses.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: DEFAULT_TITLE,
+    template: `%s | ${SITE_SHORT_TITLE}`,
+  },
+  description: DEFAULT_DESCRIPTION,
+  keywords: [
+    "MindToCode",
+    "Technical Guidance",
+    "MVP Development",
+    "Learner Support",
+    "Capstone Project Help",
+    "SaaS MVP",
+    "Reach Developer",
+    "Next.js Consultant",
+    "Freelance Developer"
+  ],
+  authors: [{ name: "Talha Ghauri", url: SITE_URL }],
+  creator: "Talha Ghauri",
+  publisher: "MindToCode",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: SITE_URL,
+    siteName: SITE_SHORT_TITLE,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE.url], 
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

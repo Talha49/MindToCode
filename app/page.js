@@ -11,6 +11,8 @@ import { Testimonials } from "@/components/sections/Testimonials"
 import { CallToAction } from "@/components/sections/CallToAction"
 import { Modal } from "@/components/ui/Modal"
 import { BookingWizard } from "@/components/booking/BookingWizard"
+import { websiteSchema, organizationSchema, serviceSchema } from "@/lib/schema"
+import { Founder } from "@/components/sections/Founder" // [NEW]
 
 export default function Home() {
   const [isBookingOpen, setIsBookingOpen] = React.useState(false)
@@ -20,6 +22,19 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col">
+       <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+
       {/* Sticky Header with Book Action */}
       <Header onBook={openBooking} />
       
@@ -30,6 +45,7 @@ export default function Home() {
       <Services />
       <Process onBook={openBooking} />
       <Testimonials />
+      <Founder onBook={openBooking} /> {/* [NEW] */}
       
       {/* CTA with Book Action */}
       <CallToAction onBook={openBooking} />
