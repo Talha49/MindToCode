@@ -10,34 +10,34 @@ import { cn } from "@/lib/utils"
 export function WhoWeHelp({ onBook }) {
     const audiences = [
         {
-            title: "Learners & Graduates",
-            description: "Available for Capstone, Research, and Final Year Projects.",
+            title: "Students & Researchers",
+            description: "Need help with Assignments or University Projects?",
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M22 10v6M2 10v6" /><path d="M22 20V10l-10-6-10 6v10" /><path d="M6 12.5V20" /><path d="M18 12.5V20" /></svg>
             ),
             features: [
-                "Project Implementation Support",
-                "Technical Documentation & Reports",
-                "Code Review & Optimization",
-                "Viva & Presentation Prep"
+                "C / C++ / Java / Python Projects",
+                "Web & App Development Assignments",
+                "AI Models & Data Science Tasks",
+                "Code Explanation & Viva Prep"
             ],
-            badge: "Academic Focus",
-            cta: "Get Project Help"
+            badge: "Academic Support",
+            cta: "Get Assignment Help"
         },
         {
-            title: "Founders & Businesses",
-            description: "Scale your startup with reliable technical execution.",
+            title: "Business & Founders",
+            description: "Looking for a developer to build your Website or App?",
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent"><path d="M12 2v20" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
             ),
             features: [
-                "MVP & Prototype Development",
-                "Custom Web Applications",
-                "AI & Automation Integration",
-                "Scalable Cloud Architecture"
+                "Custom Websites (React/Next.js)",
+                "Software & Tool Development",
+                "MVP for Startups",
+                "Bug Fixing & Maintenance"
             ],
-            badge: "Business Solutions",
-            cta: "Build Your MVP"
+            badge: "Direct Freelance",
+            cta: "Start Your Project"
         }
     ]
 
@@ -45,9 +45,9 @@ export function WhoWeHelp({ onBook }) {
         <Section id="who-we-help" className="relative overflow-hidden">
             <Container>
                 <div className="text-center space-y-4 mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold font-heading">Who We Empower</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold font-heading">Who I Can Help</h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Tailored technical expertise for individuals and organizations at every stage of their journey.
+                        Whether you need academic mastery or business growth, I've got you covered.
                     </p>
                 </div>
 

@@ -20,6 +20,31 @@ export function BookingWizard({ onClose }) {
 
     const [loading, setLoading] = React.useState(false)
     const [success, setSuccess] = React.useState(false)
+    const [bookedSlots, setBookedSlots] = React.useState([]) // NEW: Track booked slots
+
+    // NEW: Fetch availability when date changes
+    React.useEffect(() => {
+        if (data.date) {
+            const fetchAvailability = async () => {
+                try {
+                    // Format date as YYYY-MM-DD for API
+                    // Note: Ensure timezone consistency. Using local string for simplicity here.
+                    // Ideally use ISO string or a library like date-fns
+                    const dateStr = data.date.toLocaleDateString('en-CA'); // YYYY-MM-DD
+                    const res = await fetch(`/api/availability?date=${dateStr}`);
+                    if (res.ok) {
+                        const json = await res.json();
+                        setBookedSlots(json.bookedTimes || []);
+                    }
+                } catch (e) {
+                    console.error("Failed to check availability", e);
+                }
+            };
+            fetchAvailability();
+        } else {
+            setBookedSlots([]);
+        }
+    }, [data.date]);
 
     const steps = [
         { title: "Service", description: "Select the type of help you need." },
@@ -74,9 +99,9 @@ export function BookingWizard({ onClose }) {
     }
 
     return (
-        <div className="w-full max-w-3xl mx-auto">
+        <div className="w-full max-w-3xl mx-auto" >
             {/* Progress Bar (Sleek) */}
-            <div className="relative mb-12 px-4">
+            < div className="relative mb-12 px-4" >
                 <div className="absolute top-1/2 left-0 w-full h-1 bg-muted rounded-full -z-10" />
                 <div
                     className="absolute top-1/2 left-0 h-1 bg-primary rounded-full -z-10 transition-all duration-500 ease-out"
@@ -103,7 +128,7 @@ export function BookingWizard({ onClose }) {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div >
 
             <div className="min-h-[420px] pt-4">
                 {step === 1 && (
@@ -176,7 +201,11 @@ export function BookingWizard({ onClose }) {
                                         <div className="text-sm font-medium text-muted-foreground mb-4 text-center">
                                             Available slots for {data.date.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' })}
                                         </div>
-                                        <TimeGrid selectedTime={data.time} onSelect={(t) => setData({ ...data, time: t })} />
+                                        <TimeGrid
+                                            selectedTime={data.time}
+                                            onSelect={(t) => setData({ ...data, time: t })}
+                                            disabledSlots={bookedSlots} // NEW prop
+                                        />
                                     </>
                                 ) : (
                                     <div className="h-full flex flex-col items-center justify-center text-muted-foreground space-y-3 opacity-60">
@@ -277,6 +306,6 @@ export function BookingWizard({ onClose }) {
                     </Button>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }

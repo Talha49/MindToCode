@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 // import { useScroll } from "@/hooks/use-scroll" // We'll build a simple scroll hook inline or separate later if needed, for now logic inline
 import { Button } from "@/components/ui/Button"
@@ -29,9 +30,13 @@ export function Header({ onBook }) {
                 <div className="flex items-center justify-between">
                     {/* Logo Area */}
                     <Link href="/" className="flex items-center gap-2 font-bold text-xl font-heading tracking-tight">
-                        <div className="h-8 w-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white">
-                            {/* Simple Code Icon Placeholder */}
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>
+                        <div className="relative h-10 w-10 overflow-hidden rounded-lg">
+                            <Image
+                                src="/assets/logo.png"
+                                alt="MindToCode Logo"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
                         MindToCode
                     </Link>

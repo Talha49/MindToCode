@@ -40,12 +40,12 @@ export default function Home() {
       
       {/* Hero with Book Action */}
       <Hero onBook={openBooking} />
-      
+            <Founder onBook={openBooking} /> {/* [NEW] */}
+
       <WhoWeHelp onBook={openBooking} />
       <Services />
       <Process onBook={openBooking} />
       <Testimonials />
-      <Founder onBook={openBooking} /> {/* [NEW] */}
       
       {/* CTA with Book Action */}
       <CallToAction onBook={openBooking} />

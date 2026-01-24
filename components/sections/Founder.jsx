@@ -52,6 +52,17 @@ export function Founder({ onBook }) {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
                             </a>
                         </div>
+
+                        {/* Personal Portfolio Link */}
+                        <a
+                            href="https://portfolio-talha-psi.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group"
+                        >
+                            <span>View my personal portfolio</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                        </a>
                     </div>
 
                     {/* Right: Visuals */}
@@ -59,7 +70,7 @@ export function Founder({ onBook }) {
                         {/* Main Image Card */}
                         <div className="relative h-[500px] w-[350px] bg-muted rounded-3xl overflow-hidden border-4 border-background shadow-2xl rotate-[-3deg] transition-all duration-500 z-20 group-hover:rotate-0 group-hover:scale-105">
                             <Image
-                                src="/assets/my1.png"
+                                src="/assets/my3.png"
                                 alt="Talha Ghauri"
                                 fill
                                 className="object-cover"
@@ -75,7 +86,7 @@ export function Founder({ onBook }) {
                         {/* Floating Interaction Shot 1 */}
                         <div className="absolute top-10 right-10 md:-right-4 h-40 w-56 bg-white rounded-xl shadow-xl border overflow-hidden rotate-[6deg] z-30 transition-all duration-700 group-hover:translate-x-4 group-hover:-rotate-3 hover:!z-40 hover:!scale-125">
                             <Image
-                                src="/assets/my2.png"
+                                src="/assets/my1.png"
                                 alt="Workflow"
                                 fill
                                 className="object-cover"
@@ -85,7 +96,7 @@ export function Founder({ onBook }) {
                         {/* Floating Interaction Shot 2 */}
                         <div className="absolute bottom-20 left-4 md:-left-8 h-48 w-40 bg-white rounded-xl shadow-xl border overflow-hidden rotate-[-12deg] z-10 transition-all duration-700 group-hover:-translate-x-4 group-hover:rotate-6 hover:!z-40 hover:!scale-125">
                             <Image
-                                src="/assets/my3.png"
+                                src="/assets/my2.png"
                                 alt="Workspace"
                                 fill
                                 className="object-cover"

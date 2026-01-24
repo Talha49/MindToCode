@@ -5,87 +5,89 @@ import { Container, Grid, Section } from "@/components/ui/Layout"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/Tabs"
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card"
 import { cn } from "@/lib/utils"
+import { ScrollReveal } from "@/components/ui/ScrollReveal"
 
 export function Services() {
     const technicalServices = [
         {
-            title: "Project Implementation Support",
-            description: "End-to-end guidance for complex technical projects, from architecture to deployment.",
-            icon: "Code2"
-        },
-        {
-            title: "Programming Assistance",
-            description: "Expert help with Python, Web Development, AI/ML models, and Data Science.",
+            title: "Coding Assignments",
+            description: "Help with syntax, logic, and debugging in Python, C++, Java, and JavaScript.",
             icon: "Terminal"
         },
         {
-            title: "Code Review & Optimization",
-            description: "Professional auditing to improve performance, security, and readability.",
-            icon: "Search"
+            title: "University Projects",
+            description: "Full-stack web apps, software projects, and capstone implementation support.",
+            icon: "Code2"
         },
         {
-            title: "Research & Documentation",
-            description: "Structured reports, thesis references, and technical writing support.",
+            title: "AI & Data Science",
+            description: "Machine Learning models, Python data analysis, and AI project support.",
+            icon: "Bot"
+        },
+        {
+            title: "Project Reports",
+            description: "Assistance with technical documentation and explanation for your viva.",
             icon: "FileText"
         }
     ]
 
     const devServices = [
         {
-            title: "MVP Development",
-            description: "Rapid prototyping to validate your startup idea with a functional product.",
-            icon: "Rocket"
-        },
-        {
-            title: "Web Applications",
-            description: "Scalable, modern web apps using Next.js, React, and cloud technologies.",
+            title: "Custom Websites",
+            description: "Professional portfolios, landing pages, and business websites using React/Next.js.",
             icon: "Laptop"
         },
         {
-            title: "AI & Automation",
-            description: "Custom AI tools (LLMs, Chatbots) and workflow automation scripts.",
-            icon: "Bot"
+            title: "Mobile & Web Apps",
+            description: "Functional applications tailored to your specific business requirements.",
+            icon: "Rocket"
         },
         {
-            title: "Dashboards & APIs",
-            description: "Internal tools, admin panels, and robust REST/GraphQL API development.",
+            title: "Backend & Systems",
+            description: "Robust APIs, database integration (SQL), and backend logic in Node.js/Python.",
             icon: "LayoutDashboard"
+        },
+        {
+            title: "Scripting & Automation",
+            description: "Automate boring tasks with custom Python scripts and tools.",
+            icon: "Search"
         }
     ]
 
     return (
         <Section id="services" variant="muted">
             <Container>
-                <div className="text-center space-y-4 mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold font-heading">Our Expertise</h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Comprehensive technical services designed to bridge the gap between idea and execution.
-                    </p>
-                </div>
+                <ScrollReveal>
+                    <div className="text-center space-y-4 mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold font-heading">My Services & Tech Stack</h2>
+                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                            I work with a wide range of technologies to deliver exactly what you need.
+                        </p>
+                    </div>
 
-                <Tabs defaultValue="guidance" className="flex flex-col items-center">
-                    <TabsList className="grid w-full max-w-[400px] grid-cols-2 mb-8">
-                        <TabsTrigger value="guidance">Technical Guidance</TabsTrigger>
-                        <TabsTrigger value="development">Development</TabsTrigger>
-                    </TabsList>
+                    <Tabs defaultValue="guidance" className="flex flex-col items-center">
+                        <TabsList className="grid w-full max-w-[400px] grid-cols-2 mb-8">
+                            <TabsTrigger value="guidance">For Students</TabsTrigger>
+                            <TabsTrigger value="development">For Business</TabsTrigger>
+                        </TabsList>
 
-                    <TabsContent value="guidance" className="w-full">
-                        <Grid cols={2} md={2} lg={4} gap={6}>
-                            {technicalServices.map((service, i) => (
-                                <ServiceCard key={i} {...service} index={i} />
-                            ))}
-                        </Grid>
-                    </TabsContent>
+                        <TabsContent value="guidance" className="w-full">
+                            <Grid cols={2} md={2} lg={4} gap={6}>
+                                {technicalServices.map((service, i) => (
+                                    <ServiceCard key={i} {...service} index={i} />
+                                ))}
+                            </Grid>
+                        </TabsContent>
 
-                    <TabsContent value="development" className="w-full">
-                        <Grid cols={2} md={2} lg={4} gap={6}>
-                            {devServices.map((service, i) => (
-                                <ServiceCard key={i} {...service} index={i} delay={i} />
-                            ))}
-                        </Grid>
-                    </TabsContent>
-                </Tabs>
-
+                        <TabsContent value="development" className="w-full">
+                            <Grid cols={2} md={2} lg={4} gap={6}>
+                                {devServices.map((service, i) => (
+                                    <ServiceCard key={i} {...service} index={i} delay={i} />
+                                ))}
+                            </Grid>
+                        </TabsContent>
+                    </Tabs>
+                </ScrollReveal>
             </Container>
         </Section>
     )

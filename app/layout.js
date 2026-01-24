@@ -40,6 +40,11 @@ export const metadata = {
   authors: [{ name: "Talha Ghauri", url: SITE_URL }],
   creator: "Talha Ghauri",
   publisher: "MindToCode",
+  icons: {
+    icon: '/assets/logo.png',
+    shortcut: '/assets/logo.png',
+    apple: '/assets/logo.png',
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -71,11 +76,16 @@ export const metadata = {
   },
 };
 
+import { ContactFloater } from "@/components/ui/ContactFloater";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} ${outfit.variable} font-sans antialiased text-foreground bg-background`}>
         {children}
+        <ContactFloater 
+          phoneNumber="923265420488" 
+        />
       </body>
     </html>
   );

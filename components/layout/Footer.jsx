@@ -44,7 +44,7 @@ export function Footer() {
                     <div className="space-y-4">
                         <h4 className="font-semibold">Connect</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li><a href="mailto:contact@mindtocode.com" className="hover:text-primary transition-colors">contact@mindtocode.com</a></li>
+                            <li><a href="mailto:contact@mindtocode.com" className="hover:text-primary transition-colors">ghaurit82@gmail.com</a></li>
                             {/* Social Icons Placeholder */}
                             <li className="flex gap-4 pt-2">
                                 <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center hover:bg-primary/10 hover:text-primary transition-colors cursor-pointer">
