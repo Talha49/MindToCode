@@ -23,7 +23,7 @@ export function Header({ onBook }) {
         <header
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b border-transparent",
-                isScrolled ? "bg-background/80 backdrop-blur-md border-border py-3" : "bg-transparent py-5"
+                isScrolled ? "bg-background/80 backdrop-blur-md border-border py-3" : "bg-background/80 backdrop-blur-md md:bg-transparent py-3 md:py-5 border-border md:border-transparent"
             )}
         >
             <Container>
@@ -50,14 +50,13 @@ export function Header({ onBook }) {
 
                     {/* Action Area */}
                     <div className="flex items-center gap-4">
-                        <Button size="sm" onClick={onBook} className="hidden sm:inline-flex">Book Consultation</Button>
-                        {/* Mobile Menu Trigger Placeholder - Will implement full mobile menu in Phase 3.2 extension or 3.3 */}
-                        <Button variant="ghost" size="icon" className="md:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg>
-                        </Button>
+                        <Button size="sm" onClick={onBook} className="inline-flex">Book Consultation</Button>
                     </div>
                 </div>
+
+
             </Container>
-        </header>
+
+        </header >
     )
 }

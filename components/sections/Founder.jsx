@@ -66,9 +66,10 @@ export function Founder({ onBook }) {
                     </div>
 
                     {/* Right: Visuals */}
-                    <div className="relative h-[600px] w-full flex items-center justify-center group perspective-1000">
+                    <div className="relative h-auto md:h-[600px] w-full flex flex-col md:block items-center justify-center group perspective-1000 mt-12 md:mt-0 gap-3">
+
                         {/* Main Image Card */}
-                        <div className="relative h-[500px] w-[350px] bg-muted rounded-3xl overflow-hidden border-4 border-background shadow-2xl rotate-[-3deg] transition-all duration-500 z-20 group-hover:rotate-0 group-hover:scale-105">
+                        <div className="relative md:absolute top-0 bottom-0 left-0 right-0 m-auto h-[400px] w-[280px] md:h-[500px] md:w-[350px] bg-muted rounded-3xl overflow-hidden border-4 border-background shadow-2xl rotate-0 md:rotate-[-3deg] transition-all duration-500 z-20 group-hover:rotate-0 group-hover:scale-105">
                             <Image
                                 src="/assets/my3.png"
                                 alt="Talha Ghauri"
@@ -83,8 +84,8 @@ export function Founder({ onBook }) {
                             </div>
                         </div>
 
-                        {/* Floating Interaction Shot 1 */}
-                        <div className="absolute top-10 right-10 md:-right-4 h-40 w-56 bg-white rounded-xl shadow-xl border overflow-hidden rotate-[6deg] z-30 transition-all duration-700 group-hover:translate-x-4 group-hover:-rotate-3 hover:!z-40 hover:!scale-125">
+                        {/* Floating Interaction Shot 1 - Closer on desktop */}
+                        <div className="relative md:absolute top-10 right-10 md:right-8 h-32 w-48 md:h-40 md:w-56 bg-white rounded-xl shadow-xl border overflow-hidden rotate-0 md:rotate-[6deg] z-30 transition-all duration-700 group-hover:translate-x-4 group-hover:-rotate-3 hover:!z-40 hover:!scale-125 hidden md:block">
                             <Image
                                 src="/assets/my1.png"
                                 alt="Workflow"
@@ -93,8 +94,8 @@ export function Founder({ onBook }) {
                             />
                         </div>
 
-                        {/* Floating Interaction Shot 2 */}
-                        <div className="absolute bottom-20 left-4 md:-left-8 h-48 w-40 bg-white rounded-xl shadow-xl border overflow-hidden rotate-[-12deg] z-10 transition-all duration-700 group-hover:-translate-x-4 group-hover:rotate-6 hover:!z-40 hover:!scale-125">
+                        {/* Floating Interaction Shot 2 - Closer on desktop */}
+                        <div className="relative md:absolute bottom-20 left-4 md:left-8 h-36 w-32 md:h-48 md:w-40 bg-white rounded-xl shadow-xl border overflow-hidden rotate-0 md:rotate-[-12deg] z-10 transition-all duration-700 group-hover:-translate-x-4 group-hover:rotate-6 hover:!z-40 hover:!scale-125 hidden md:block">
                             <Image
                                 src="/assets/my2.png"
                                 alt="Workspace"
@@ -104,7 +105,7 @@ export function Founder({ onBook }) {
                         </div>
 
                         {/* Decorative Circle */}
-                        <div className="absolute inset-0 m-auto h-[500px] w-[500px] bg-primary/5 rounded-full blur-3xl -z-10 animate-pulse" />
+                        <div className="absolute inset-0 m-auto h-[300px] w-[300px] md:h-[500px] md:w-[500px] bg-primary/5 rounded-full blur-3xl -z-10 animate-pulse pointer-events-none" />
                     </div>
 
                 </Grid>
