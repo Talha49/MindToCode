@@ -1,4 +1,5 @@
 import { CapstoneProjectView } from "@/components/sections/capstone/CapstoneProjectView"
+import { SITE_URL } from "@/lib/seo"
 
 export const metadata = {
   title: "Capstone Project Help for CS Students | Source Code & Docs",
@@ -20,7 +21,7 @@ export const metadata = {
   openGraph: {
     title: "Capstone Project Help - Secure Your Degree",
     description: "Don't stress about your FYP. Get a complete, running project with documentation today.",
-    url: "https://mindtocode.com/capstone-projects",
+    url: `${SITE_URL}/capstone-projects`,
   }
 }
 

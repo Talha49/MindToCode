@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Layout";
 import { Button } from "@/components/ui/Button";
+import { SITE_URL } from "@/lib/seo";
 
 export const metadata = {
   title: "How to Build a Startup MVP in 4 Weeks (2026 Guide) | MindToCode",
@@ -18,7 +19,7 @@ export const metadata = {
   ],
   openGraph: {
     type: "article",
-    url: "https://mindtocode.com/blog/how-to-build-mvp-4-weeks",
+    url: `${SITE_URL}/blog/how-to-build-mvp-4-weeks`,
     title: "How to Build a Startup MVP in 4 Weeks",
     description: "Launch faster. Fail cheaper. Scale smarter.",
     images: [{
@@ -34,18 +35,18 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "How to Build a Startup MVP in 4 Weeks (Step-by-Step)",
-  "image": "https://mindtocode.com/blog/mvp-guide.png",
+  "image": `${SITE_URL}/blog/mvp-guide.png`,
   "author": {
     "@type": "Person",
     "name": "Talha Ghauri",
-    "url": "https://mindtocode.com"
+    "url": SITE_URL
   },
   "publisher": {
     "@type": "Organization",
     "name": "MindToCode",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://mindtocode.com/assets/logo.png"
+      "url": `${SITE_URL}/assets/logo.png`
     }
   },
   "datePublished": "2026-01-24",

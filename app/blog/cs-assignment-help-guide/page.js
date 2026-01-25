@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
 import { Container, Section } from "@/components/ui/Layout"
 import { Button } from "@/components/ui/Button"
+import { SITE_URL } from "@/lib/seo"
 
 // Metadata for SEO
 export const metadata = {
@@ -20,7 +21,7 @@ export const metadata = {
   ],
   openGraph: {
     type: "article",
-    url: "https://mindtocode.com/blog/cs-assignment-help-guide",
+    url: `${SITE_URL}/blog/cs-assignment-help-guide`,
     title: "The Ultimate Guide to CS Assignment Help (2026)",
     description: "Expert advice on navigating difficult CS projects without cheating.",
     images: [{ url: "/hero-bg.png" }], // Placeholder
@@ -32,18 +33,18 @@ export default function BlogPost() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "The Ultimate Guide to CS Assignment Help in 2026: Authenticity vs. Cheating",
-    "image": "https://mindtocode.com/hero-bg.png", 
+    "image": `${SITE_URL}/hero-bg.png`, 
     "author": {
       "@type": "Person",
       "name": "Talha Ghauri",
-      "url": "https://mindtocode.com"
+      "url": SITE_URL
     },
     "publisher": {
         "@type": "Organization",
         "name": "MindToCode",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://mindtocode.com/assets/logo.png"
+          "url": `${SITE_URL}/assets/logo.png`
         }
     },
     "datePublished": "2026-01-25",

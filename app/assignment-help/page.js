@@ -1,4 +1,5 @@
 import { AssignmentHelpView } from "@/components/sections/assignment/AssignmentHelpView"
+import { SITE_URL } from "@/lib/seo"
 
 export const metadata = {
   title: "Assignment Help for CS Students | Expert Coding Support",
@@ -20,12 +21,11 @@ export const metadata = {
   openGraph: {
     title: "Assignment Help for CS Students - Guaranteed Results",
     description: "Struggling with code? Get expert help for Python, Java, C++, and Web Dev assignments. 100% Confidential.",
-    url: "https://mindtocode.com/assignment-help",
+    url: `${SITE_URL}/assignment-help`,
   }
 }
 
 export default function AssignmentHelpPage() {
-  // FAQ Schema for SEO
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

@@ -1,4 +1,5 @@
 import { BusinessWebProjectView } from "@/components/sections/business/BusinessWebProjectView"
+import { SITE_URL } from "@/lib/seo"
 
 export const metadata = {
   title: "Professional Business Website Design | High Converting Sites",
@@ -14,7 +15,7 @@ export const metadata = {
   openGraph: {
     title: "Convert Visitors into Customers - Premium Web Design",
     description: "Your business deserves a professional online presence. Get a fast, beautiful website in 2 weeks.",
-    url: "https://mindtocode.com/business-web",
+    url: `${SITE_URL}/business-web`,
   }
 }
 

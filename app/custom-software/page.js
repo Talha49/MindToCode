@@ -1,4 +1,5 @@
 import { CustomSoftwareProjectView } from "@/components/sections/custom/CustomSoftwareProjectView"
+import { SITE_URL } from "@/lib/seo"
 
 export const metadata = {
   title: "Custom Software Development Company | Enterprise SaaS Solutions",
@@ -14,7 +15,7 @@ export const metadata = {
   openGraph: {
     title: "Build Scalable Software Solutions - MindToCode",
     description: "From internal tools to global SaaS platforms. We architect secure, high-performance software.",
-    url: "https://mindtocode.com/custom-software",
+    url: `${SITE_URL}/custom-software`,
   }
 }
 

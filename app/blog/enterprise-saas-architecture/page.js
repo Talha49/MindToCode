@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Layout";
 import { Button } from "@/components/ui/Button";
+import { SITE_URL } from "@/lib/seo";
 
 export const metadata = {
   title: "Enterprise SaaS Architecture: A Guide for CTOs (2026) | MindToCode",
@@ -18,7 +19,7 @@ export const metadata = {
   ],
   openGraph: {
     type: "article",
-    url: "https://mindtocode.com/blog/enterprise-saas-architecture",
+    url: `${SITE_URL}/blog/enterprise-saas-architecture`,
     title: "Enterprise SaaS Architecture: Designing for Scale",
     description: "How to architect software that handles growth without breaking.",
     images: [{
@@ -34,18 +35,18 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Enterprise SaaS Architecture: A Guide for CTOs",
-  "image": "https://mindtocode.com/blog/saas-architecture.png",
+  "image": `${SITE_URL}/blog/saas-architecture.png`,
   "author": {
     "@type": "Person",
     "name": "Talha Ghauri",
-    "url": "https://mindtocode.com"
+    "url": SITE_URL
   },
   "publisher": {
     "@type": "Organization",
     "name": "MindToCode",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://mindtocode.com/assets/logo.png"
+      "url": `${SITE_URL}/assets/logo.png`
     }
   },
   "datePublished": "2026-01-22",

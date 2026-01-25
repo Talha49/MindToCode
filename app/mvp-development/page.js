@@ -1,4 +1,5 @@
 import { MvpProjectView } from "@/components/sections/mvp/MvpProjectView"
+import { SITE_URL } from "@/lib/seo"
 
 export const metadata = {
   title: "MVP Development for Startups | Build Your SaaS in 4 Weeks",
@@ -19,7 +20,7 @@ export const metadata = {
   openGraph: {
     title: "Launch Your Startup in 4 Weeks - Expert MVP Development",
     description: "Don't waste months hiring. Get your idea built by a senior technical partner. Scalable, fast, and cost-effective.",
-    url: "https://mindtocode.com/mvp-development",
+    url: `${SITE_URL}/mvp-development`,
   }
 }
 

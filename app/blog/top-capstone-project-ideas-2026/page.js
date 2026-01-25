@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Layout";
 import { Button } from "@/components/ui/Button";
+import { SITE_URL } from "@/lib/seo";
 
 export const metadata = {
   title: "Top 10 Computer Science Capstone Project Ideas (2026) | Rated A+",
@@ -18,7 +19,7 @@ export const metadata = {
   ],
   openGraph: {
     type: "article",
-    url: "https://mindtocode.com/blog/top-capstone-project-ideas-2026",
+    url: `${SITE_URL}/blog/top-capstone-project-ideas-2026`,
     title: "Top 10 CS Capstone Project Ideas for 2026",
     description: "Don't pick a boring topic. Here are 10 projects that guarantee an A+ grade.",
     images: [{
@@ -34,18 +35,18 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Top 10 Computer Science Capstone Project Ideas for 2026",
-  "image": "https://mindtocode.com/blog/capstone-ideas.png",
+  "image": `${SITE_URL}/blog/capstone-ideas.png`,
   "author": {
     "@type": "Person",
     "name": "Talha Ghauri",
-    "url": "https://mindtocode.com"
+    "url": SITE_URL
   },
   "publisher": {
     "@type": "Organization",
     "name": "MindToCode",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://mindtocode.com/assets/logo.png"
+      "url": `${SITE_URL}/assets/logo.png`
     }
   },
   "datePublished": "2026-01-26",
