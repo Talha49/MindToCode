@@ -83,7 +83,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} ${outfit.variable} font-sans antialiased text-foreground bg-background`}>
         {children}
         <ContactFloater 
-          phoneNumber="923265420488" 
+          phoneNumber="4407448690269" 
         />
       </body>
     </html>
