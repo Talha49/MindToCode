@@ -6,8 +6,19 @@ import { Container, Section } from "@/components/ui/Layout"
 import { cn } from "@/lib/utils"
 
 export function Testimonials() {
-    // Reviews R1-R10
-    const reviews = Array.from({ length: 10 }, (_, i) => `/assets/R${i + 1}.png`)
+    // Reviews R1-R10 with descriptive search-optimized alt tags
+    const reviews = [
+        { src: "/assets/R1.webp", alt: "5-Star Fiverr client review for Python scripting, debugging, and web automation project" },
+        { src: "/assets/R2.webp", alt: "Fiverr client review praising rapid delivery and clean code on Next.js web application" },
+        { src: "/assets/R3.webp", alt: "Top Rated Seller 5-star review for computer science algorithm and capstone implementation" },
+        { src: "/assets/R4.webp", alt: "Client feedback praising full-stack SaaS MVP delivery, responsiveness, and clean architecture" },
+        { src: "/assets/R5.webp", alt: "5-Star testimonial praising exceptional problem solving, database schema, and frontend UI" },
+        { src: "/assets/R6.webp", alt: "Client review highlighting machine learning model accuracy and seamless backend API integration" },
+        { src: "/assets/R7.webp", alt: "5-Star Fiverr rating for complex SQL database optimization and reliable system architecture" },
+        { src: "/assets/R8.webp", alt: "Client feedback praising on-time university final year project submission and clear documentation" },
+        { src: "/assets/R9.webp", alt: "5-Star review for high-performance React dashboard and thorough code comments" },
+        { src: "/assets/R10.webp", alt: "Client review praising 1-on-1 code explanation, viva defense preparation, and professionalism" },
+    ]
 
     return (
         <Section id="reviews" className="relative py-24 bg-muted/20">
@@ -30,8 +41,8 @@ export function Testimonials() {
                             </div>
                             <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border shadow-sm bg-muted/10">
                                 <Image
-                                    src="/assets/P2.png"
-                                    alt="Fiverr Profile Stats"
+                                    src="/assets/P2.webp"
+                                    alt="Fiverr Seller Dashboard showing 100% order completion and 5.0 star rating"
                                     fill
                                     className="object-contain hover:scale-110 transition-transform duration-500"
                                 />
@@ -48,8 +59,8 @@ export function Testimonials() {
                             </div>
                             <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border shadow-sm bg-muted/10">
                                 <Image
-                                    src="/assets/p1.png"
-                                    alt="Global Reach"
+                                    src="/assets/p1.webp"
+                                    alt="Fiverr World Map graphic displaying projects delivered to clients across 30+ countries"
                                     fill
                                     className="object-contain hover:scale-110 transition-transform duration-500"
                                 />
@@ -62,7 +73,7 @@ export function Testimonials() {
                 <div className="columns-1 md:columns-2 gap-8 space-y-8 max-w-6xl mx-auto">
 
                     {/* Mapping Reviews R1-R10 */}
-                    {reviews.map((src, i) => (
+                    {reviews.map((review, i) => (
                         <div
                             key={i}
                             className="break-inside-avoid mb-8 rounded-xl border bg-background shadow-sm group transition-all duration-300 ease-out hover:scale-[1.35] hover:z-50 hover:shadow-2xl relative origin-center"
@@ -70,8 +81,8 @@ export function Testimonials() {
                             <div className="relative w-full rounded-xl overflow-hidden bg-white">
                                 {/* Natural aspect ratio - Full View */}
                                 <Image
-                                    src={src}
-                                    alt={`Client Result ${i + 1}`}
+                                    src={review.src}
+                                    alt={review.alt}
                                     width={0}
                                     height={0}
                                     sizes="(max-width: 768px) 100vw, 50vw"

@@ -34,7 +34,7 @@ export function Hero({ onBook }) {
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <Image
                     src="/hero-bg.png"
-                    alt="Background"
+                    alt="Modern abstract network texture background"
                     fill
                     className="object-cover object-center opacity-30 dark:opacity-20"
                     priority
@@ -124,7 +124,7 @@ export function Hero({ onBook }) {
                         {/* The Image (Logo) */}
                         <Image
                             src="/assets/logo.png"
-                            alt="3D Logo"
+                            alt="MindToCode 3D geometric brand icon"
                             fill
                             className="object-contain drop-shadow-2xl"
                             style={{ transform: "translateZ(20px)" }}

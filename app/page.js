@@ -11,8 +11,9 @@ import { Testimonials } from "@/components/sections/Testimonials"
 import { CallToAction } from "@/components/sections/CallToAction"
 import { Modal } from "@/components/ui/Modal"
 import { BookingWizard } from "@/components/booking/BookingWizard"
-import { websiteSchema, organizationSchema, serviceSchema } from "@/lib/schema"
-import { Founder } from "@/components/sections/Founder" // [NEW]
+import { websiteSchema, organizationSchema, serviceSchema, personSchema } from "@/lib/schema"
+import { Founder } from "@/components/sections/Founder"
+import { SplitAudience } from "@/components/sections/SplitAudience"
 
 export default function Home() {
   const [isBookingOpen, setIsBookingOpen] = React.useState(false)
@@ -34,15 +35,25 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
 
       {/* Sticky Header with Book Action */}
       <Header onBook={openBooking} />
       
       {/* Hero with Book Action */}
       <Hero onBook={openBooking} />
-            <Founder onBook={openBooking} /> {/* [NEW] */}
+
+      {/* Split Path Layout Directly Under Hero */}
+      <SplitAudience />
+
+      {/* Meet the Developer */}
+      <Founder onBook={openBooking} />
 
       <WhoWeHelp onBook={openBooking} />
+
       <Services />
       <Process onBook={openBooking} />
       <Testimonials />

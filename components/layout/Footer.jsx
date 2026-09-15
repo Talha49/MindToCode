@@ -24,9 +24,9 @@ export function Footer() {
                     <div className="space-y-4">
                         <h4 className="font-semibold">Services</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li><Link href="#services" className="hover:text-primary transition-colors">Technical Guidance</Link></li>
-                            <li><Link href="#services" className="hover:text-primary transition-colors">Web Development</Link></li>
-                            <li><Link href="#services" className="hover:text-primary transition-colors">Code Review</Link></li>
+                            <li><Link href="/academic-help" className="hover:text-primary transition-colors">Academic & Capstone Help</Link></li>
+                            <li><Link href="/mvp-development" className="hover:text-primary transition-colors">MVP & Startup Development</Link></li>
+                            <li><Link href="/blog" className="hover:text-primary transition-colors">Guides & Tech Blog</Link></li>
                         </ul>
                     </div>
 
@@ -34,9 +34,9 @@ export function Footer() {
                     <div className="space-y-4">
                         <h4 className="font-semibold">Company</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li><Link href="#process" className="hover:text-primary transition-colors">How it Works</Link></li>
-                            <li><Link href="#reviews" className="hover:text-primary transition-colors">Success Stories</Link></li>
-                            <li><Link href="/book" className="hover:text-primary transition-colors">Book a Call</Link></li>
+                            <li><Link href="/#process" className="hover:text-primary transition-colors">How it Works</Link></li>
+                            <li><Link href="/#reviews" className="hover:text-primary transition-colors">Success Stories</Link></li>
+                            <li><Link href="/#founder" className="hover:text-primary transition-colors">Meet the Developer</Link></li>
                         </ul>
                     </div>
 

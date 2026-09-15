@@ -11,7 +11,7 @@ import { Modal } from "@/components/ui/Modal"
 import { BookingWizard } from "@/components/booking/BookingWizard"
 import { Process } from "@/components/sections/Process"
 
-export function MvpProjectView({ faqSchema }) {
+export function MvpProjectView({ faqSchema, serviceSchema }) {
     const [isBookingOpen, setIsBookingOpen] = React.useState(false)
 
     const openBooking = () => setIsBookingOpen(true)
@@ -19,10 +19,18 @@ export function MvpProjectView({ faqSchema }) {
 
     return (
         <main className="flex min-h-screen flex-col">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-            />
+            {faqSchema && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+                />
+            )}
+            {serviceSchema && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+                />
+            )}
 
             <Header onBook={openBooking} />
 

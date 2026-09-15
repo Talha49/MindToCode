@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
 import { Container, Grid, Section } from "@/components/ui/Layout"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
@@ -22,7 +23,8 @@ export function WhoWeHelp({ onBook }) {
                 "Code Explanation & Viva Prep"
             ],
             badge: "Academic Support",
-            cta: "Get Assignment Help"
+            cta: "Get Academic & Project Help",
+            href: "/academic-help"
         },
         {
             title: "Business & Founders",
@@ -37,7 +39,8 @@ export function WhoWeHelp({ onBook }) {
                 "Bug Fixing & Maintenance"
             ],
             badge: "Direct Freelance",
-            cta: "Start Your Project"
+            cta: "Start Your MVP & Project",
+            href: "/mvp-development"
         }
     ]
 
@@ -90,9 +93,11 @@ export function WhoWeHelp({ onBook }) {
                             </CardContent>
 
                             <CardFooter>
-                                <Button className="w-full" onClick={onBook}>
-                                    {audience.cta}
-                                </Button>
+                                <Link href={audience.href} className="w-full">
+                                    <Button className="w-full">
+                                        {audience.cta}
+                                    </Button>
+                                </Link>
                             </CardFooter>
                         </Card>
                     ))}

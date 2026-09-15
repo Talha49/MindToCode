@@ -6,9 +6,10 @@ export default function sitemap() {
   // 1. Static Pages (High Priority)
   const staticPages = [
     '',
+    '/academic-help',
+    '/mvp-development',
     '/assignment-help',
     '/capstone-projects',
-    '/mvp-development',
     '/business-web',
     '/custom-software',
     '/blog',

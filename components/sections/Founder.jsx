@@ -71,8 +71,8 @@ export function Founder({ onBook }) {
                         {/* Main Image Card */}
                         <div className="relative md:absolute top-0 bottom-0 left-0 right-0 m-auto h-[400px] w-[280px] md:h-[500px] md:w-[350px] bg-muted rounded-3xl overflow-hidden border-4 border-background shadow-2xl rotate-0 md:rotate-[-3deg] transition-all duration-500 z-20 group-hover:rotate-0 group-hover:scale-105">
                             <Image
-                                src="/assets/my3.png"
-                                alt="Talha Ghauri"
+                                src="/assets/my3.webp"
+                                alt="Talha Ghauri - Full Stack Engineer and Founder of MindToCode"
                                 fill
                                 className="object-cover"
                                 priority
@@ -87,8 +87,8 @@ export function Founder({ onBook }) {
                         {/* Floating Interaction Shot 1 - Closer on desktop */}
                         <div className="relative md:absolute top-10 right-10 md:right-8 h-32 w-48 md:h-40 md:w-56 bg-white rounded-xl shadow-xl border overflow-hidden rotate-0 md:rotate-[6deg] z-30 transition-all duration-700 group-hover:translate-x-4 group-hover:-rotate-3 hover:!z-40 hover:!scale-125 hidden md:block">
                             <Image
-                                src="/assets/my1.png"
-                                alt="Workflow"
+                                src="/assets/my1.webp"
+                                alt="Software development workflow, code review, and system architecture design"
                                 fill
                                 className="object-cover"
                             />
@@ -97,8 +97,8 @@ export function Founder({ onBook }) {
                         {/* Floating Interaction Shot 2 - Closer on desktop */}
                         <div className="relative md:absolute bottom-20 left-4 md:left-8 h-36 w-32 md:h-48 md:w-40 bg-white rounded-xl shadow-xl border overflow-hidden rotate-0 md:rotate-[-12deg] z-10 transition-all duration-700 group-hover:-translate-x-4 group-hover:rotate-6 hover:!z-40 hover:!scale-125 hidden md:block">
                             <Image
-                                src="/assets/my2.png"
-                                alt="Workspace"
+                                src="/assets/my2.webp"
+                                alt="High-performance developer workspace setup for rapid building"
                                 fill
                                 className="object-cover"
                             />

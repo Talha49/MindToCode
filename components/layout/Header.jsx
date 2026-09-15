@@ -42,10 +42,11 @@ export function Header({ onBook }) {
                     </Link>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-                        <Link href="#services" className="hover:text-primary transition-colors">Services</Link>
-                        <Link href="#process" className="hover:text-primary transition-colors">How it Works</Link>
-                        <Link href="#why-us" className="hover:text-primary transition-colors">Why Us</Link>
+                    <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
+                        <Link href="/academic-help" className="hover:text-primary transition-colors">Academic Help</Link>
+                        <Link href="/mvp-development" className="hover:text-primary transition-colors">MVP Dev</Link>
+                        <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
+                        <Link href="/#founder" className="hover:text-primary transition-colors">About</Link>
                     </nav>
 
                     {/* Action Area */}
